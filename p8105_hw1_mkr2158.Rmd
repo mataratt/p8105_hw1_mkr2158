@@ -46,10 +46,25 @@ Making a data frame
 hw1_df = 
   tibble(
     vec_numeric = rnorm(10),
-    vec_char = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+    vec_char = c("Amy", "Bob", "Carl", "Dave", "Emily", "Frank", "Gina", "Hannah", "Isabelle", "Jack"),
     vec_logical = vec_numeric > 0,
     vec_factor = factor(c("Screened", "Refused", "Consented", "Screened", "Refused", "Consented", "Screened", "Refused", "Consented", "Screened"))
   )
 ```
+
+Attempting to the take the mean of the variables created in the data frame
+```{r}
+mean(pull(hw1_df, vec_numeric))
+mean(pull(hw1_df, vec_char))
+mean(pull(hw1_df, vec_logical))
+mean(pull(hw1_df, vec_factor))
+```
+
+The mean was only taken for variables `vec_numeric` and `vec_logical`.
+
+The mean for `vec_numeric` was `r mean(pull(hw1_df, vec_numeric))` and the mean for `vec_logical` is `r mean(pull(hw1_df, vec_logical))`.
+
+The mean was unable to be generated from variables `vec_char` and `vec_factor` because the arguments are not numeric. Therefore, R cannot run this calculation. 
+
 
 
