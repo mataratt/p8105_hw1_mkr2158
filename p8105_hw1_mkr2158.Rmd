@@ -52,6 +52,12 @@ hw1_df =
   )
 ```
 
+Displaying the data frame to check
+
+```{r}
+hw1_df
+```
+
 Attempting to the take the mean of the variables created in the data frame
 ```{r}
 mean(pull(hw1_df, vec_numeric))
@@ -74,5 +80,3 @@ as.numeric(pull(hw1_df, vec_factor))
 ```
 
 Using the as.numeric function allows us to convert the variables into numeric arguments. This function allows us to turn the logical and factor variables into numeric arguments, which will allow us to calculate the mean if we wanted to. However, vec_char still remains a character variable and argument (due to it being Names and not numeric data type), therefore we cannot calculate the mean of this variable still. 
-
-# End of Homework 1
