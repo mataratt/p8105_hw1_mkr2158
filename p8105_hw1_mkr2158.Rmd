@@ -6,15 +6,28 @@ output: github_document
 date: "2025-09-20"
 ---
 
-# Loading tidyverse and moderndive package
+# Problem 1
+
+Loading tidyverse and moderndive package
 
 ```{r}
 library(tidyverse)
 library(moderndive)
 ```
 
+Retreiving the dataset
 ```{r}
 data("early_january_weather")
 ```
 
+The variables in this dataset include the origin, time of recording (year, month, day, and hour), temperature, dewpoint, relative humidity, wind direction, speed, gust, precipitation, pressure, visibility, and data and hour of recording.
+
+Some important variables to consider are:
+temp = temperature in Fahrenheit
+time_hour = date and hour of the recording
+humid = relative humidity
+
+The dataset `early_january_weather` contains `r nrow(early_january_weather)` hourly measurements and `r ncol(early_january_weather)` variables.
+
+The mean temperature from the dataset `early_january_weather` is `r mean(pull(early_january_weather,temp))`
 
