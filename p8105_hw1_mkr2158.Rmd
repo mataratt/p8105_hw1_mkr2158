@@ -29,7 +29,7 @@ humid = relative humidity
 
 The dataset `early_january_weather` contains `r nrow(early_january_weather)` hourly measurements and `r ncol(early_january_weather)` variables.
 
-The mean temperature from the dataset `early_january_weather` is `r mean(pull(early_january_weather,temp))`.
+The mean temperature from the dataset `early_january_weather` is `r mean(pull(early_january_weather,temp))` degrees Fahrenheit.
 
 ```{r}
 ggplot(early_january_weather, aes(x=time_hour, y=temp, color=humid)) + geom_point()
